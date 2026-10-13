@@ -73,7 +73,7 @@ project/
 └── out/                         # Created automatically
 ```
 
-Data fold should be placed by unzipping the downloaded data.zip file from https://doi.org/10.6084/m9.figshare.34397397.
+Data folder should be placed by unzipping the downloaded data.zip file from https://doi.org/10.6084/m9.figshare.34397397.
 ### PPI Networks and Seed Genes
 
 The dataset loader from data_process.py receives the disease name, network name. The script therefore requests the loader's giant-connected-component filtering mode (dt.FilterGCC). dt.FilterGCC value (True or False) does not impact the prediction results very much. Supported network and disease names depend on the loader and available data; the script defaults to `String` and `BRCA` and does not enumerate all supported combinations.
