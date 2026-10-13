@@ -1,0 +1,23 @@
+# Create: conda env create -f qcfwalk.yaml
+# Activate: conda activate qcfwalk
+# Compatible dependency specification, not an export of the manuscript environment.
+name: qcfwalk
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.24.4
+  - pandas=1.5.3
+  - scipy=1.10.1
+  # NetworkX 2.x returns sparse matrices compatible with this code's slicing.
+  - networkx=2.8.8
+  - pip
+
+# qcfwalk is the local project package, not a third-party dependency.
+# Required source layout:
+#   qcfwalk/__init__.py
+#   qcfwalk/models.py
+#   qcfwalk/utils.py
+#   qcfwalk/data_process.py  (uploaded as data_process-1.py)
+# Run predictions-1.py from a directory where qcfwalk is importable.
+# Input datasets must be supplied separately.
